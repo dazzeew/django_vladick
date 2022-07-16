@@ -38,7 +38,7 @@ class Country(models.Model):
 class Employee(models.Model):
 	user = models.OneToOneField(User, verbose_name="Пользователь", on_delete=models.CASCADE)
 	born_date = models.DateField('Дата рождения', blank = True)
-	country_id = models.ForeignKey(Country, verbose_name="Страна", db_column= 'country_id', on_delete = models.PROTECT, blank = True, default = '')
+	country_id = models.ForeignKey(Country, verbose_name="Страна", db_column= 'country_id', on_delete = models.PROTECT, blank = True)
 	date_add_param = models.DateTimeField('Дата добавления/обновления', null = True, auto_now = True)
 
 	def __str__(self):

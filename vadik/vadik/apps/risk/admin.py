@@ -21,9 +21,9 @@ class TransactionAdmin(admin.ModelAdmin):
 	date_hierarchy = 'date_order'
 
 class EmployeeAdmin(admin.ModelAdmin):
-	list_display = ('user__username','date_add_param')
-	list_filter = ('user__username','date_add_param')
-	search_fields = ['user__username']
+	list_display = ('user','date_add_param')
+	list_filter = ['date_add_param']
+	search_fields = ['user']
 	date_hierarchy = 'date_add_param'
 
 admin.site.register(Valuta,ValutaAdmin)
